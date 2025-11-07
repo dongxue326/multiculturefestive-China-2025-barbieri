@@ -102,6 +102,123 @@
     .nav-button:active {
       transform: translateY(0);
     }
+
+    /* 响应式设计 - 移动设备优化 */
+    @media screen and (max-width: 768px) {
+      .container {
+        margin: 10px;
+        border-radius: 12px;
+      }
+
+      header {
+        padding: 20px 15px 10px;
+      }
+
+      header h1 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+
+      .navigation {
+        padding: 15px 10px;
+      }
+
+      .nav-button {
+        display: block;
+        padding: 12px 20px;
+        margin: 8px 0;
+        font-size: 14px;
+        border-radius: 20px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+      }
+
+      .gallery img {
+        border-width: 3px;
+      }
+
+      .text-block {
+        padding: 20px 15px;
+      }
+
+      .lang-section {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+      }
+
+      .lang-section h3 {
+        font-size: 20px;
+      }
+
+      .lang-section p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      figcaption {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      figcaption .desc {
+        font-size: 12px;
+      }
+
+      figcaption p {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      footer {
+        padding: 12px 15px;
+        font-size: 12px;
+      }
+    }
+
+    /* iPhone和其他小屏幕设备 */
+    @media screen and (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      header p {
+        font-size: 13px;
+      }
+
+      .nav-button {
+        font-size: 13px;
+        padding: 10px 18px;
+      }
+
+      .gallery {
+        padding: 10px;
+        gap: 15px;
+      }
+
+      .text-block {
+        padding: 15px 10px;
+      }
+
+      .lang-section {
+        padding: 12px 15px;
+      }
+
+      .lang-section h3 {
+        font-size: 18px;
+      }
+
+      .lang-section p {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
