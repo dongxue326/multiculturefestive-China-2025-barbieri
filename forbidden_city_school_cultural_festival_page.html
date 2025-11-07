@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Forbidden City — La Ciudad Prohibida — 故宫</title>
+  <style>
+    body {
+      font-family: 'Noto Serif', 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background: #fffaf0 url('images/ink-background.png') no-repeat center top / cover;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      background: rgba(255,255,255,0.8);
+      border-bottom: 4px solid #c49b63;
+    }
+    header h1 {
+      font-size: 40px;
+      color: #a40000;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px #f1c27d;
+    }
+    header p {
+      color: #444;
+      font-size: 18px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.9);
+      border: 3px solid #c49b63;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 30px;
+    }
+    figure {
+      position: relative;
+      margin: 0;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 16px;
+      border: 4px solid #d4a373;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    figcaption {
+      text-align: center;
+      font-size: 15px;
+      color: #5c3b2e;
+      margin-top: 6px;
+      background-color: rgba(255, 255, 255, 0.75);
+      border-radius: 8px;
+      padding: 6px;
+      border: 1px solid #e0b97d;
+      line-height: 1.5;
+    }
+    figcaption .desc {
+      display: block;
+      font-size: 13px;
+      color: #704214;
+      margin-top: 4px;
+    }
+    .text-block {
+      padding: 40px;
+      line-height: 1.8;
+    }
+    .lang-section {
+      margin-bottom: 40px;
+      background: #fffaf2 url('images/ink-border.png') repeat-x bottom;
+      border-radius: 12px;
+      padding: 20px 30px;
+      border: 1px solid #e5c29f;
+    }
+    .lang-section h3 {
+      text-align: center;
+      color: #a40000;
+      border-bottom: 2px solid #d4a373;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    .lang-section p {
+      text-align: justify;
+      margin-bottom: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 14px;
+      background: #f7e7ce;
+      border-top: 2px solid #d4a373;
+      color: #555;
+    }
+    .navigation {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 2px solid #c49b63;
+    }
+    .nav-button {
+      display: inline-block;
+      padding: 12px 30px;
+      margin: 0 10px;
+      background: linear-gradient(135deg, #a40000 0%, #c49b63 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .nav-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #c49b63 0%, #a40000 100%);
+    }
+    .nav-button:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navigation">
+      <a href="FourGreatInventions.html" class="nav-button">
+        📜 四大发明 / Four Great Inventions → 中国四大发明
+      </a>
+    </nav>
+    <header>
+      <h1>The Forbidden City — La Ciudad Prohibida — 故宫</h1>
+      <p>Explore the majestic heart of China's imperial history | Explora el majestuoso corazón de la historia imperial de China</p>
+    </header>
+
+    <section class="gallery" aria-label="Photos of the Forbidden City">
+      <figure>
+        <img src="images/forbidden1.jpg" alt="Meridian Gate (午门)" />
+        <figcaption>
+          午门 — Meridian Gate — Puerta Meridiana
+          <span class="desc">午门是故宫的正门，象征皇权与威严。<br> The Meridian Gate is the main entrance, symbolizing imperial authority.<br> La Puerta Meridiana es la entrada principal, símbolo del poder imperial.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="images/forbidden2.jpg" alt="Hall of Supreme Harmony (太和殿)" />
+        <figcaption>
+          太和殿 — Hall of Supreme Harmony — Salón de la Armonía Suprema
+          <span class="desc">太和殿是皇帝举行重要仪式的地方。<br> The Hall of Supreme Harmony was where emperors held grand ceremonies.<br> El Salón de la Armonía Suprema era donde los emperadores celebraban grandes ceremonias.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="images/forbidden3.jpg" alt="Imperial Garden (御花园)" />
+        <figcaption>
+          御花园 — Imperial Garden — Jardín Imperial
+          <span class="desc">御花园是皇室休息与赏景的花园。<br> The Imperial Garden was a peaceful retreat for the royal family.<br> El Jardín Imperial era un retiro tranquilo para la familia real.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="images/forbidden4.jpg" alt="Palace roofs and skyline (宫殿屋顶)" />
+        <figcaption>
+          宫殿屋顶 — Palace Roofs — Techos del Palacio
+          <span class="desc">金色屋顶象征皇家的尊贵与荣耀。<br> The golden roofs represent the nobility and glory of the royal family.<br> Los techos dorados representan la nobleza y la gloria de la familia real.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="text-block">
+      <div class="lang-section">
+        <h3>English</h3>
+        <p>The Forbidden City, located in the center of Beijing, was the imperial palace for twenty-four emperors of China. Surrounded by tall red walls and crowned with golden roofs, it embodies the essence of Chinese architecture and imperial power. The vast complex includes more than 900 buildings filled with ancient treasures, art, and history. Strolling through its majestic gates and wide courtyards feels like walking through centuries of royal life. Today, it stands as a museum that welcomes millions of visitors each year, allowing people from around the world to experience the culture, elegance, and grandeur of ancient China.</p>
+      </div>
+
+      <div class="lang-section">
+        <h3>Español</h3>
+        <p>La Ciudad Prohibida, situada en el centro de Pekín, fue el palacio imperial de veinticuatro emperadores de China. Rodeada por altos muros rojos y coronada con techos dorados, representa la esencia de la arquitectura china y el poder imperial. El inmenso complejo incluye más de 900 edificios llenos de tesoros antiguos, arte e historia. Pasear por sus majestuosas puertas y amplios patios es como caminar por siglos de vida real. Hoy en día, funciona como un museo que recibe a millones de visitantes cada año, permitiendo que personas de todo el mundo experimenten la cultura, la elegancia y la grandeza de la antigua China.</p>
+      </div>
+    </section>
+
+    <footer>
+      Place your image files in an <strong>images</strong> folder beside this HTML file for offline viewing. Enjoy exploring China’s imperial wonder!
+    </footer>
+  </div>
+</body>
+</html>
