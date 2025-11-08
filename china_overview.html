@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>China Overview — Panorama de China — 中国概览</title>
+  <style>
+    body {
+      font-family: 'Noto Serif', 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf0;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      background: rgba(255,255,255,0.9);
+      border-bottom: 4px solid #c49b63;
+    }
+    header h1 {
+      font-size: 40px;
+      color: #a40000;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px #f1c27d;
+    }
+    header p {
+      color: #444;
+      font-size: 18px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      background: rgba(107, 36, 36, 0.95);
+      border: 3px solid #c49b63;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .intro-section {
+      padding: 30px 40px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      border-radius: 12px;
+      border: 2px solid #d4a373;
+    }
+    .intro-section h2 {
+      text-align: center;
+      color: #a40000;
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #d4a373;
+      padding-bottom: 10px;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .intro-item {
+      background-color: #fffaf2;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #e5c29f;
+    }
+    .intro-item strong {
+      color: #a40000;
+      font-size: 16px;
+    }
+    .intro-item p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+    .map-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .map-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 3px solid #d4a373;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 30px;
+    }
+    figure {
+      position: relative;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 16px;
+      border: 4px solid #d4a373;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    figcaption {
+      text-align: center;
+      font-size: 15px;
+      color: #5c3b2e;
+      margin-top: 6px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      padding: 6px;
+      border: 1px solid #e0b97d;
+      line-height: 1.5;
+    }
+    figcaption .desc { display: block; font-size: 13px; color: #704214; margin-top: 4px; }
+    .text-block { padding: 24px 40px 40px; line-height: 1.8; }
+    .lang-section {
+      margin-bottom: 24px;
+      background-color: #fffaf2;
+      border-radius: 12px;
+      padding: 20px 30px;
+      border: 1px solid #e5c29f;
+    }
+    .lang-section h3 { text-align: center; color: #a40000; border-bottom: 2px solid #d4a373; padding-bottom: 8px; margin-bottom: 12px; font-size: 22px; }
+    .lang-section p { text-align: justify; margin-bottom: 10px; }
+    footer { text-align: center; padding: 16px; font-size: 14px; background: #f7e7ce; border-top: 2px solid #d4a373; color: #555; }
+    .navigation {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 2px solid #c49b63;
+    }
+    .nav-button {
+      display: inline-block;
+      padding: 12px 30px;
+      margin: 0 10px;
+      background: linear-gradient(135deg, #a40000 0%, #c49b63 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .nav-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #c49b63 0%, #a40000 100%);
+    }
+    .nav-button:active {
+      transform: translateY(0);
+    }
+
+    /* 响应式设计 - 移动设备优化 */
+    @media screen and (max-width: 768px) {
+      .container {
+        margin: 10px;
+        border-radius: 12px;
+      }
+
+      header {
+        padding: 20px 15px 10px;
+      }
+
+      header h1 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+
+      .navigation {
+        padding: 15px 10px;
+      }
+
+      .nav-button {
+        display: block;
+        padding: 12px 20px;
+        margin: 8px 0;
+        font-size: 14px;
+        border-radius: 20px;
+      }
+
+      .intro-section {
+        padding: 20px 15px;
+        margin: 15px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+      }
+
+      .gallery img {
+        border-width: 3px;
+        max-height: 400px;
+      }
+
+      .text-block {
+        padding: 20px 15px;
+      }
+
+      .lang-section {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+      }
+
+      .lang-section h3 {
+        font-size: 20px;
+      }
+
+      .lang-section p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      figcaption {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      figcaption .desc {
+        font-size: 12px;
+      }
+
+      footer {
+        padding: 12px 15px;
+        font-size: 12px;
+      }
+    }
+
+    /* iPhone和其他小屏幕设备 */
+    @media screen and (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      header p {
+        font-size: 13px;
+      }
+
+      .nav-button {
+        font-size: 13px;
+        padding: 10px 18px;
+      }
+
+      .intro-section h2 {
+        font-size: 22px;
+      }
+
+      .gallery {
+        padding: 10px;
+        gap: 15px;
+      }
+
+      .gallery img {
+        max-height: 350px;
+      }
+
+      .text-block {
+        padding: 15px 10px;
+      }
+
+      .lang-section {
+        padding: 12px 15px;
+      }
+
+      .lang-section h3 {
+        font-size: 18px;
+      }
+
+      .lang-section p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navigation">
+      <a href="FourGreatInventions.html" class="nav-button">
+        📜 Four Great Inventions → 中国四大发明
+      </a>
+      <a href="forbidden_city_school_cultural_festival_page.html" class="nav-button">
+        🏛️ Forbidden City → 故宫文化节
+      </a>
+      <a href="journey_to_the_west.html" class="nav-button">
+        🐒 Journey to the West → 西游记
+      </a>
+    </nav>
+    <header>
+      <h1>China Overview — Panorama de China — 中国概览</h1>
+      <p>Discover China: Land, People, and Cultural Treasures | Descubre China: Tierra, Gente y Tesoros Culturales</p>
+    </header>
+
+    <section class="intro-section">
+      <h2>About China — Acerca de China</h2>
+      <div class="intro-grid">
+        <div class="intro-item">
+          <strong>Territory / Territorio</strong>
+          <p>Approximately 9.6 million square kilometers (3.7 million square miles)</p>
+          <p>Aproximadamente 9,6 millones de kilómetros cuadrados (3,7 millones de millas cuadradas)</p>
+        </div>
+        <div class="intro-item">
+          <strong>Population / Población</strong>
+          <p>Over 1.4 billion people (as of 2024)</p>
+          <p>Más de 1.400 millones de personas (a partir de 2024)</p>
+        </div>
+        <div class="intro-item">
+          <strong>Capital / Capital</strong>
+          <p>Beijing (北京)</p>
+          <p>Pekín (北京)</p>
+        </div>
+        <div class="intro-item">
+          <strong>Official Language / Idioma Oficial</strong>
+          <p>Mandarin Chinese (普通话)</p>
+          <p>Chino Mandarín (普通话)</p>
+        </div>
+      </div>
+      <div class="map-container">
+        <img src="images/china-map.jpg" alt="Map of China (中国地图)" />
+        <p style="margin-top: 10px; font-size: 14px; color: #555;">Map of China — Mapa de China — 中国地图</p>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Chinese Cultural Items">
+      <figure>
+        <img src="images/china-1-brush.jpg" alt="Chinese Brush (毛笔)" />
+        <figcaption>
+          毛笔 — Chinese Brush — Pincel Chino
+          <span class="desc">English: Traditional writing and painting tool made from animal hair.<br>Español: Herramienta tradicional de escritura y pintura hecha de pelo de animal.</span>
+          <p><b>More about the Chinese Brush:</b> The Chinese brush, or "maobi" (毛笔), is one of the Four Treasures of the Study. Made from animal hair (often rabbit, goat, or wolf) attached to a bamboo or wooden handle, it has been used for calligraphy and painting for over two thousand years. The brush allows artists to create varying line widths and expressive strokes, making it essential for traditional Chinese art. Mastery of the brush requires years of practice and is considered both an art form and a spiritual practice.</p>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/china-2-abacus.jpg" alt="Abacus (算盘)" />
+        <figcaption>
+          算盘 — Abacus — Ábaco
+          <span class="desc">English: Ancient calculating tool using beads on rods.<br>Español: Herramienta de cálculo antigua que usa cuentas en varillas.</span>
+          <p><b>More about the Abacus:</b> The Chinese abacus, or "suanpan" (算盘), is an ancient calculating device that has been used for over two thousand years. It consists of beads strung on rods within a rectangular frame. Skilled users can perform complex calculations faster than with modern calculators. The abacus teaches mathematical concepts and mental calculation skills. Even in the digital age, it remains valued for its educational benefits and is still used in many Chinese schools to develop children's mathematical abilities.</p>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/china-3-chinese-chess.jpg" alt="Chinese Chess (中国象棋)" />
+        <figcaption>
+          中国象棋 — Chinese Chess — Ajedrez Chino
+          <span class="desc">English: Traditional strategy board game with ancient origins.<br>Español: Juego de mesa de estrategia tradicional con orígenes antiguos.</span>
+          <p><b>More about Chinese Chess:</b> Chinese Chess, or "Xiangqi" (象棋), is a two-player strategy board game that originated in China over a thousand years ago. Played on a board divided by a river, it features pieces representing ancient Chinese military units. The game requires strategic thinking, planning, and tactical skills. Unlike Western chess, Chinese Chess pieces move on the intersections of lines rather than within squares. It remains one of the most popular board games in China and is enjoyed by millions of people worldwide.</p>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/china-4-go.jpg" alt="Go (围棋)" />
+        <figcaption>
+          围棋 — Go — Go
+          <span class="desc">English: Ancient board game of strategy and territory control.<br>Español: Juego de mesa antiguo de estrategia y control territorial.</span>
+          <p><b>More about Go:</b> Go, or "Weiqi" (围棋), is an ancient Chinese board game that dates back over 2,500 years. Played on a 19x19 grid with black and white stones, it is considered one of the most complex board games ever created. The rules are simple, but the strategies are incredibly deep. Go emphasizes balance, patience, and long-term thinking. It has been used to teach military strategy, philosophy, and life lessons. Today, Go is recognized as a symbol of intellectual achievement and is played competitively worldwide, with professional players and international tournaments.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="text-block">
+      <div class="lang-section">
+        <h3>English</h3>
+        <p>China, officially the People's Republic of China, is the world's most populous country and the third-largest by territory. With a history spanning over 5,000 years, China has developed a rich and diverse culture that continues to influence the world today. From the ancient writing brush that created beautiful calligraphy to the abacus that revolutionized calculation, from the strategic depth of Chinese Chess to the philosophical complexity of Go, Chinese culture offers endless treasures of wisdom and innovation. These cultural artifacts and games not only represent China's historical achievements but also reflect the values of patience, strategy, and harmony that are central to Chinese philosophy. As China continues to develop and modernize, these traditional elements remain deeply valued and are passed down through generations, connecting the past with the present and inspiring future innovation.</p>
+      </div>
+      <div class="lang-section">
+        <h3>Español</h3>
+        <p>China, oficialmente la República Popular China, es el país más poblado del mundo y el tercero más grande por territorio. Con una historia que abarca más de 5.000 años, China ha desarrollado una cultura rica y diversa que continúa influyendo en el mundo actual. Desde el antiguo pincel de escritura que creó hermosas caligrafías hasta el ábaco que revolucionó el cálculo, desde la profundidad estratégica del Ajedrez Chino hasta la complejidad filosófica del Go, la cultura china ofrece tesoros infinitos de sabiduría e innovación. Estos artefactos culturales y juegos no solo representan los logros históricos de China, sino que también reflejan los valores de paciencia, estrategia y armonía que son centrales en la filosofía china. A medida que China continúa desarrollándose y modernizándose, estos elementos tradicionales siguen siendo profundamente valorados y se transmiten de generación en generación, conectando el pasado con el presente e inspirando la innovación futura.</p>
+      </div>
+    </section>
+
+    <footer>
+      Place China overview images in an <strong>images</strong> folder beside this HTML file (e.g., china-map.jpg, china-1-brush.jpg, china-2-abacus.jpg, china-3-chinese-chess.jpg, china-4-go.jpg) for offline viewing.
+    </footer>
+  </div>
+</body>
+</html>
+
